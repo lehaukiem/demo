@@ -1,0 +1,338 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
+    <link rel="stylesheet" href="./css/authentication.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        /* Reponse */
+.navbar {
+    height: 52px;
+    background: #e98206 !important;
+}
+
+.main-Link-Container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -6px;
+    flex-wrap: wrap;
+    padding: 15px 0px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navLink {
+    color: var(--text-color) !important;
+}
+
+.content {
+    position: relative;
+    top: 0;
+    display: block;
+}
+.login-Form{
+    height: auto;
+}
+.secondary-Header2 {
+    background-color: #f27125;
+    position: static;
+    width: 100%;
+    height: none;
+    color: #FFFFFF;
+}
+
+/* Mobile mobile */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 0;
+    }
+    .first-Header {
+        height: auto !important;
+        padding: 4px 20px !important;
+    }
+    .first-Header-content {
+        height: 20% !important;
+        padding: 14px 0 !important;
+    }
+    #header-Logo {
+        position: relative !important;
+        left: 0 !important;
+    }
+   
+    .first-Header-Right {
+        display: block;
+        position: relative !important;
+        width: auto;
+        text-align: center;
+        top: 12px;
+        left: 0;
+        text-align: left !important;
+    }
+    #header-Logo {
+        position: relative !important;
+        left: -2px !important;
+    }
+
+    .navbar {
+        height: auto;
+    }
+    
+    .bg-light {
+        background-color: #e98206 !important;
+    }
+
+    .navLink {
+        text-decoration: none;
+        color: #FFFFFF !important;
+        font-family: "Roboto", Helvetica;
+    }
+
+    .main-Link-Container {
+        display: flex;
+        position: relative;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 15px 0px !important;
+        flex-direction: row;
+        justify-content: left;
+        display: inline-block;
+    }
+
+    .first-Header {
+        height: 100px;
+        padding: 0px 40px;
+    }
+
+    #header-Logo {
+        position: relative;
+        left: 18%;
+    }
+    .first-Header-Right {
+        display: block;
+        width: auto;
+        text-align: center;
+        position: static;
+    }
+    .content-background {
+        display: block;
+        width: auto;
+        height: 806px;
+        object-fit: fill;
+    }
+    .login-Form-InputArea {
+        width: 100%;
+    }
+    .login-Form {
+        position: absolute;
+        left: 4px;
+        top: 20px;
+        width: 98%;
+        margin: auto;
+        padding: 12px;
+        display: block;
+        font-size: 17px;
+        border-radius: 14px;
+        background: #ffffff;
+        mix-blend-mode: normal;
+        box-shadow: 10px 10px 10px #00000026;
+        font-family: "Roboto", Helvetica !important;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 0px;
+        background: #333333;
+        padding: 10px 0;
+        font-family: "Roboto", Helvetica !important;
+    }
+
+    .aboutArea {
+        font-family: "Roboto", Helvetica !important;
+        padding: 20px 20px;
+    }
+}
+
+/* Tablet tablet */
+@media (min-width: 600px) and (max-width: 1024px) {
+    header {
+        padding: 0px 16px;
+    }
+    .navbar {
+        height: auto;
+    }
+    .first-Header-Right {
+        width: auto;
+    }
+    .main-Link-Container {
+        display: flex;
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: -6px;
+        flex-wrap: wrap;
+        padding: 15px 0px;
+        flex-direction: column;
+    }
+    .main-Link-Container {
+        padding: 15px 0 !important;
+    }
+    .content-background {
+        display: block;
+        height: 806px;
+        width: auto;
+        object-fit: fill;
+    }
+    .login-Form {
+        position: absolute;
+        top: 70px;
+        width: 98%;
+        height: auto;
+        right: 7px;
+        padding: 20px;
+        background: #ffffff;
+        box-shadow: 10px 10px 10px #00000026;
+        mix-blend-mode: normal;
+        border-radius: 14px;
+    }
+    .aboutArea {
+        padding: 50px 20px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1900px) {
+    header {
+        padding: 0 100px;
+    }
+    .main-Link-Container {
+        padding: 15px 90px !important;
+        justify-content: space-between !important;
+    }
+    .content-background {
+        display: block;
+        height: 806px;
+        object-fit: cover;
+    }
+    .login-Form {
+        top: 31px;
+        width: 463px;
+        right: 108px;
+        height: auto;
+    }
+    .aboutArea {
+        padding: 50px 100px;
+    }
+}
+    </style>
+  </head>
+
+
+<body>
+    <div>
+        <header>
+            <div class="first-Header">
+                <div class="first-Header-content">
+                    <img id="header-Logo" src="./images/headerLogo.svg" alt="">
+                    <div class="first-Header-Right">
+                        <div class="mailArea">
+                            <img src="./icons/mailbox.svg" alt="">
+                            <text class="navPhone">tuyensinh.hanoi@fpt.edu.vn</text>
+                        </div>
+                        <div class="phoneArea">
+                            <img src="./icons/phone.svg" alt="">
+                            <text class="navPhone">(024) 7300 5588</text>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 main-Link-Container">
+                    <li class="nav-item active"><a class="navLink nav-link" href="#Thongtintuyensinh">THÔNG TIN TUYỂN
+                            SINH</a></li>
+                    <li class="nav-item active"><a class="navLink nav-link" href="#Chuongtrinhdaotao">CHƯƠNG TRÌNH ĐÀO
+                            TẠO</a></li>
+                    <li class="nav-item active"><a class="navLink nav-link" href="#Nghanhhoc">NGÀNH HỌC</a></li>
+                    <li class="nav-item active"><a class="navLink nav-link" href="#Cohoivieclam">CƠ HỘI VIỆC LÀM</a>
+                    </li>
+                    <li class="nav-item active"><a class="navLink nav-link" href="#Cauhoithuonggap">CÁC CÂU HỎI THƯỜNG
+                            GẶP</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="content">
+            <img class="content-background" src="./images/background.png" alt="">
+            <div class="login-Form">
+                <div class="login-Form-Title-Logo">
+                    <img src="./images/formLogo.svg" alt="">
+                </div>
+                <div class="login-Form-Content">
+                    <h2 class="login-Form-Title">QUÊN MẬT KHẨU</h2>
+                    <form class="login-Form-InputArea">
+                        <div class="whitespace-sm"></div>
+                        <div class="form-group">
+                            <label for="text">Mã OTP đã được gửi qua tin nhắn SMS đến</label>
+                            <input type="text" class="form-control" id="text" placeholder="Nhập mã OTP">
+                        </div>
+                        <button id="btnLogin" type="submit" class="">Xác thực</button><br>
+                        <a id="send-otp" href="" class="">Gửi lại OTP</a><br>
+                        <input id="btnCancel" type="button" value="Hủy">
+                        <div class="whitespace-sm"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="aboutArea">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="./images/FooterLogo.svg" alt="">
+                    <div class="whitespace-sm"></div>
+                    <div>© 2017 Bản quyền thuộc về Trường đại học FPT.</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="whitespace-md"></div>
+                    <div class="placementTitle">Hà Nội</div>
+                    <div>Khu Giáo dục và Đào tạo – Khu Công nghệ cao Hòa Lạc – Km29 Đại lộ Thăng Long, Thạch Thất, TP.
+                        Hà Nội</div>
+                    <div><a href="#Phone" class="navLink navPhone">Điện thoại: (024) 73001866/ (024) 73005588</a></div>
+
+                    <!-- space area in outer HTML -->
+                    <div class="whitespace-md"></div>
+                    <div class="placementTitle">Hồ Chí Minh</div>
+                    <div>Lô E2a-7, Đường D1 Khu Công nghệ cao, P.Long Thạnh Mỹ, Q.9, TP.HCM</div>
+                    <div><a href="#Phone" class="navLink navPhone">Điện thoại: (028) 73001866/ (028) 73005588</a></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="whitespace-md"></div>
+                    <div class="placementTitle">Đà Nẵng</div>
+                    <div>Khu Đô thị Công nghệ FPT, P. Hòa Hải, Q. Ngũ Hành Sơn, Tp. Đà Nẵng.
+                    </div>
+                    <div><a href="#Phone" class="navLink navPhone">Điện thoại: (0236) 7300999</a></div>
+
+                    <div class="whitespace-md"></div>
+
+                    <div class="placementTitle">Cần Thơ</div>
+                    <div>Số 600 đường Nguyễn Văn Cừ nối dài, Khu vực 6, phường An Bình, quận Ninh Kiều, TP. Cần Thơ
+                    </div>
+                    <div><a href="#Phone" class="navLink navPhone">Điện thoại: (0292) 7303636</a></div>
+                </div>
+            </div>
+            <div class="whitespace-md"></div>
+            <hr>
+            <div class="author">Developed by TinhvanOutsourcing</div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body><div style="position: absolute; top: 0px;"></div></html>
